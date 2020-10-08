@@ -20,17 +20,24 @@ let initialState = {
 const todoReducer = (state=initialState, action) => {
   switch (action.type) {
     case ADD_TODO:
-      let text = state.newToDoText;
-      state.toDos.push({text: text, id: ++state.toDoId, checked: false});
-      state.newToDoText = "";
+      if (state.newToDoText !== "") {
+        let text = state.newToDoText;
+        state.toDos.push({text: text, id: ++state.toDoId, checked: false});
+        state.newToDoText = "";
+      }
       return state;
     case UPDATE_NEW_TODO:
       state.newToDoText = action.text;
       return state;
     case UPDATE_TODO_CHECKED_STATUS:
-      let index = state.toDos.findIndex(obj => obj.id === action.id);
-      let isChecked = state.toDos[index].checked;
-      state.toDos[index].checked = !isChecked;
+      let indexToUpdate = state.toDos.findIndex(obj => obj.id === action.id);
+      let isChecked = state.toDos[indexToUpdate].checked;
+      state.toDos[indexToUpdate].checked = !isChecked;
+      return state;
+    case DELETE_TODO:
+      let indexToDelete = state.toDos.findIndex(obj => obj.id === action.id);
+      let toDosTmp = state.toDos;
+      state.todos = toDosTmp.splice(indexToDelete, 1);
       return state;
     default:
       return state;
@@ -54,6 +61,13 @@ export const updateTodoTextCreator = (text) => {
 export const updateTodoCheckedStatus = (id) => {
   return {
     type: UPDATE_TODO_CHECKED_STATUS,
+    id: id,
+  }
+}
+
+export const deleteTodo = (id) => {
+  return {
+    type: DELETE_TODO,
     id: id,
   }
 }

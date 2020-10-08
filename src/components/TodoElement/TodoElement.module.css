@@ -1,17 +1,19 @@
 .toDo-element {
-    margin: 20px 0;
-    font-size: 2em;
+    margin: 10px 0;
+    font-size: 1em;
     word-break: break-all;
-    border-bottom: 1px solid #bdbdbd;
+    border-bottom: 1px solid #e1e1e1;
 }
 
 .checkbox {
+    position: absolute;
+    margin-right: 10px;
     width: 1.5em;
     height: 1.5em;
 }
 
 .task, .task-checked {
-    margin-left: 10px;
+    margin-left: 25px;
 }
 
 .task {
@@ -20,4 +22,16 @@
 
 .task-checked {
     color: #c8c8c8;
+}
+
+.delete-button {
+    position: relative;
+    float: right;
+    padding: 0;
+    width: 1.5em;
+    height: 1.5em;
+    border: none;
+    background-color: #ff746d;
+    color: white;
+    border-radius: 5px;
 }
