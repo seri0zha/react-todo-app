@@ -1,0 +1,23 @@
+.toDo-element {
+    margin: 20px 0;
+    font-size: 2em;
+    word-break: break-all;
+    border-bottom: 1px solid #bdbdbd;
+}
+
+.checkbox {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.task, .task-checked {
+    margin-left: 10px;
+}
+
+.task {
+
+}
+
+.task-checked {
+    color: #c8c8c8;
+}

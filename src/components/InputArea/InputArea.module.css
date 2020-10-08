@@ -1,0 +1,35 @@
+.input-area-wrapper {
+    margin-top: 15px;
+    grid-area: i;
+    width: 100%;
+}
+
+.input-wrapper {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.input {
+    width: calc(100% - 20px);
+    font-size: 2em;
+    padding: 10px;
+    border: 1px solid #a1a1a1;
+    border-radius: 10px;
+}
+
+.input:focus {
+    outline-width: 0;
+}
+
+.button-wrapper {
+    grid-area: b;
+    margin: 10px 0;
+}
+
+.button {
+    font-size: 1.5em;
+    border: none;
+    padding: 10px;
+    background-color: #b4eeb4;
+    border-radius: 5px;
+}
