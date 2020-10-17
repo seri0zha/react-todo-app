@@ -31,7 +31,17 @@
     width: 1.5em;
     height: 1.5em;
     border: none;
-    background-color: #ff746d;
+    background-color: #FF6F61;
     color: white;
     border-radius: 5px;
+}
+
+.delete-button:focus {
+    outline: 0;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+    background-color: #ff3d44;
+    transition: 0.15s;
 }

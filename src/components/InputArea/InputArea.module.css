@@ -33,3 +33,13 @@
     background-color: #b4eeb4;
     border-radius: 5px;
 }
+
+.button:hover {
+    background-color: #67ee82;
+    transition: 0.15s;
+    cursor: pointer ;
+}
+
+.button:focus {
+    outline: 0;
+}

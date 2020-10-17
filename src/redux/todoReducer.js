@@ -3,14 +3,6 @@ const DELETE_TODO = "DELETE_TODO";
 const UPDATE_NEW_TODO = "UPDATE_NEW_TODO";
 const UPDATE_TODO_CHECKED_STATUS = "UPDATE_TODO_CHECKED_STATUS";
 
-/*
-const deleteTodoCreator = () => {
-  return {
-    type: DELETE_TODO,
-  }
-}
-*/
-
 let initialState = {
   toDos: [],
   newToDoText: "",

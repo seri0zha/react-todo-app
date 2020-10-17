@@ -11,3 +11,7 @@
     max-width: 800px;
     width: 80vw;
 }
+.app-wrapper div a {
+    color: #FF6F61;
+    text-decoration: none;
+}
